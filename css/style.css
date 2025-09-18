@@ -15,7 +15,7 @@
   font-family: "Roboto", sans-serif;
 }
 body {
-  background-color: var(--black);
+  background-color: #000;
   /* Adiciona espaço no topo para o conteúdo não ficar atrás do header fixo */
   padding-top: 9.5rem;
 }
@@ -84,6 +84,10 @@ section {
   font-size: 1.7rem;
   cursor: pointer;
   display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover {
+  letter-spacing: 0.1rem;
 }
 .home-container {
   background: url("..//assets/img/home-img.jpg");
@@ -110,6 +114,39 @@ section {
   padding: 1rem 0;
 }
 
+/* About Sectionn */
+.title {
+  font-size: 4rem;
+  color: var(--main-color);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.title span {
+  color: #fff;
+}
+.abount .row {
+  display: flex;
+  align-items: center;
+  background-color: var(--black);
+  gap: 1.5rem;
+}
+.abount .row .content {
+  padding: 4rem;
+}
+
+.content h3 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.content p {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
 /* Responsividade */
 @media screen and (max-width: 900px) {
   section {
@@ -171,3 +208,5 @@ section {
     height: 30px;
   }
 }
+
+/* Animations */
