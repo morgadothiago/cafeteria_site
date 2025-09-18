@@ -32,6 +32,7 @@ section {
   right: 0;
   z-index: 999;
   border-bottom: var(--border);
+  background-color: #000;
 }
 .header section {
   display: flex;
@@ -75,6 +76,39 @@ section {
 }
 
 /* Home */
+
+.btn {
+  background-color: var(--main-color);
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+  display: inline-block;
+}
+.home-container {
+  background: url("..//assets/img/home-img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.home-container section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+.content {
+  max-width: 60rem;
+}
+.content h3 {
+  color: #fff;
+  font-size: 6rem;
+}
+.content p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
 
 /* Responsividade */
 @media screen and (max-width: 900px) {
