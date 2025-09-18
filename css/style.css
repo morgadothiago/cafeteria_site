@@ -12,15 +12,16 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
-  transition: 0.2s linear;
   font-family: "Roboto", sans-serif;
 }
 body {
   background-color: var(--black);
+  /* Adiciona espaço no topo para o conteúdo não ficar atrás do header fixo */
+  padding-top: 9.5rem;
 }
 section {
-  padding: 3rem, 2rem;
+  /* Sintaxe corrigida: sem vírgula */
+  padding: 3rem 2rem;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -43,13 +44,12 @@ section {
   margin: 0 1rem;
   font-size: 1.8rem;
   color: #fff;
+  transition: color 0.2s linear;
 }
 .navbar a:hover {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   padding-bottom: 0.5rem;
-  transition: 0.2s;
-  font-size: 2rem;
 }
 .icons {
   display: flex;
@@ -58,14 +58,20 @@ section {
 }
 .icons img {
   font-weight: bold;
+  transition: transform 0.2s linear;
 }
 .menu-mobile {
   display: none;
+
+  cursor: pointer;
 }
 
 .icons img:hover {
-  width: 40px;
-  height: 40px;
+  /* Efeito de hover sem causar mudança no layout */
+  transform: scale(1.2);
+}
+.icons-mobile {
+  display: none;
 }
 
 /* Home */
@@ -79,7 +85,19 @@ section {
   .header img {
   }
   .navbar {
-    display: none;
+    /* Fundo escuro para consistência e melhor contraste */
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s ease-in-out;
   }
   .icons {
     display: none;
@@ -93,5 +111,29 @@ section {
   }
   .icons-menu {
     color: var(--main-color);
+  }
+  .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .navbar a {
+    display: block;
+    margin: 1.5rem;
+    font-size: 2rem;
+    /* Cor branca para legibilidade no fundo escuro */
+    color: #fff;
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: none; /* Remove a borda no mobile para um look mais limpo */
+  }
+  .icons-mobile {
+    display: flex;
+    gap: 30px;
+    justify-content: center; /* Centraliza os ícones */
+    padding: 1.5rem 0;
+  }
+  .icons-mobile img {
+    width: 30px;
+    height: 30px;
   }
 }
