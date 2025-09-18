@@ -14,3 +14,14 @@ btnMenu.addEventListener("click", () => {
     menuIcon.src = "https://img.icons8.com/ios-filled/50/d3ad7f/menu--v1.png" // Ícone de menu
   }
 })
+
+document.addEventListener("click", (event) => {
+  if (
+    !navbar.contains(event.target) &&
+    !btnMenu.contains(event.target) &&
+    navbar.classList.contains("active")
+  ) {
+    navbar.classList.remove("active")
+    menuIcon.src = "https://img.icons8.com/ios-filled/50/d3ad7f/menu--v1.png" // Ícone de menu
+  }
+})

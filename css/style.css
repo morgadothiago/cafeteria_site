@@ -89,7 +89,7 @@ section {
   cursor: pointer;
   display: inline-block;
   transition: 0.2s ease-in-out;
-  transition: 0.2s;
+  border-radius: 0.5rem;
 }
 .btn:hover {
   letter-spacing: 0.1rem;
@@ -102,17 +102,16 @@ section {
 .home-container section {
   display: flex;
   align-items: center;
-  min-height: 100vh;
   min-height: 90vh;
 }
-.content {
+.home-container .content {
   max-width: 60rem;
 }
-.content h3 {
+.home-container .content h1 {
   color: #fff;
   font-size: 6rem;
 }
-.content p {
+.home-container .content p {
   color: #fff;
   font-size: 2rem;
   font-weight: 300;
@@ -132,23 +131,24 @@ section {
 .title span {
   color: #fff;
 }
-.abount .row {
+.about .row {
   display: flex;
   align-items: center;
   background-color: var(--black);
-  gap: 1.5rem;
+  gap: 1rem;
 }
-.abount .row .container-img img {
+.about .row .container-img img {
   width: 100%;
 }
-.abount .row .content {
+.about .row .content {
+  flex: 1 1 45rem;
   padding: 4rem;
 }
-.content h3 {
+.about .content h3 {
   font-size: 3rem;
   color: #fff;
 }
-.content p {
+.about .content p {
   color: #fff;
   font-size: 1.6rem;
   line-height: 1.8;
@@ -171,7 +171,7 @@ section {
     top: 99%;
     left: 0;
     right: 0;
-    text-align: center;
+
     border-top: var(--border);
     border-bottom: var(--border);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -207,38 +207,27 @@ section {
   .icons-mobile {
     display: flex;
     gap: 30px;
-    justify-content: center; /* Centraliza os ícones */
-    padding: 1.5rem 0;
-  }
-  .icons-mobile img {
-    width: 30px;
-    height: 30px;
-  }
-  .home-container {
-    background: url("..//assets/img/home-img.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    justify-content: center; /* Alterado para centralizar os ícones */
+    padding: 1.5rem 20px;
+    cursor: pointer;
   }
   .home-container section {
     min-height: 60vh;
   }
-  .content h3 {
+  .home-container .content h1 {
     font-size: 4.5rem;
   }
-  .content p {
+  .home-container .content p {
     font-size: 1.6rem;
   }
 
-  .abount {
+  .about {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .abount .row {
+  .about .row {
     flex-direction: column;
-  }
-  .abount .row .container-img {
   }
   .btn {
     width: 100%;
