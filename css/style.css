@@ -189,7 +189,6 @@ section {
 }
 .menu .box-container .box:hover {
   background-color: #fff;
-  transition: 0.2s linear;
 }
 .menu .box-container .box:hover > * {
   color: var(--black);
